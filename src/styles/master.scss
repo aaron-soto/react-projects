@@ -1,0 +1,90 @@
+@import '../styles/varibles';
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body,
+html {
+	font-family: 'Open Sans', sans-serif;
+	background-color: $black;
+	color: $light;
+}
+
+a {
+	color: $blue;
+	text-decoration: none;
+}
+
+.page {
+	margin-top: 80px;
+	padding: 0 30px;
+	transition: all .4s $bouceTransition;
+
+	&.sidebarOpened {
+		margin-left: 240px;
+	}
+
+	.container {
+		max-width: 560px;
+		width: 100%;
+		margin: 0 auto;
+
+		.row {
+			display: flex;
+			width: 100%;
+
+			.col {
+				display: flex;
+				flex-direction: column;
+			}
+
+			&.page-header {
+				flex-direction: column;
+				margin-bottom: 2rem;
+
+				h1 {
+					margin-bottom: 0;
+				}
+
+				a {
+					margin-top: 1rem;
+				}
+			}
+		}
+
+		h1 {
+			margin-bottom: 25px;
+		}
+
+		p {
+			font-size: 18px;
+			line-height: 1.7rem;
+			margin-bottom: 20px;
+
+			&.label {
+				font-size: 16px;
+				margin-bottom: 0;
+				font-weight: 600;
+				color: $lightgray;
+			}
+		}
+	}
+}
+
+.challenge {
+	width: 100%;
+
+	input[type="text"] {
+		width: 100%;
+		font-size: 24px;
+		padding: 1rem;
+		background-color: $gray;
+		border: none;
+		color: $light;
+		border-radius: 5px;
+		display: block;
+	}
+}

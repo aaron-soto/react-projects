@@ -1,0 +1,105 @@
+@import '../../styles/varibles';
+
+.sidebar {
+    background-color: $gray;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    transition: all .4s $bouceTransition;
+    
+    &.closed {
+        left: -240px;
+    }
+
+    .link-section {
+        display: flex;
+        flex-direction: column;
+        background-color: $gray;
+        // transition: all .4s $bouceTransition;
+    }
+
+    h3 {
+        padding-left: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .project-link {
+        padding: .75rem 1rem;
+        width: 100%;
+        display: block;
+        transition: all .4s $bouceTransition;
+
+        &.active {
+            border-right: 5px solid $blue;
+        }
+
+        &.done {
+            &:after {
+                content: '\2714';
+                position: absolute;
+                right: 10px;
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                line-height: 20px;
+                text-align: center;
+                font-size: 13px;
+                font-weight: 700;
+                color: $darkerLight;
+                background-color: transparentize($green, .7);
+            }
+        }
+
+        &.home {
+            margin-bottom: 100px;
+        }
+
+        &:hover {
+            background-color: $black;
+        }
+    }
+
+    .tier {
+        padding: .2rem 1rem;
+        background-color: darken($gray, 3);
+        color: #a6a6a6;
+        border-top: 3px solid #777777;
+        cursor: pointer;
+
+        &.opened {
+            background-color: transparentize($blue, .8);
+        }
+    }
+
+    .menu-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: -44px;
+        top: 45px;
+        width: 44px;
+        height: 44px;
+        background-color: $darkerLight;
+        background-color: $blue;
+        color: $gray;
+        color: $light;
+        font-size: 20px;
+        line-height: 44px;
+        cursor: pointer;
+
+        .arrow {
+            transition: all .4s $bouceTransition;
+        }
+        
+        span {
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

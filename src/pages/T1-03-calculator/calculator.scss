@@ -1,0 +1,60 @@
+@import '../../styles/varibles';
+
+.btn-row {
+    width: 100%;
+
+    .calc-btn {
+        width: 25%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 32px;
+        color: $lightgray;
+        border-radius: 15px;
+
+        &:hover {
+            background-color: $gray;
+            cursor: pointer;
+        }
+
+        &.btn-yellow {
+            color: $yellow;
+        }
+
+        &.btn-white {
+            color: $light;
+        }
+
+        &.btn-last {
+            background-color: $yellow;
+        }
+    }
+}
+
+.output-row, .history-row {
+    width: 100%;
+    font-size: 23px;
+    text-align: right;
+    font-weight: 600;
+    height: 2rem;
+
+    p, h2 {
+        text-align: right;
+        width: 100%;
+        display: block;
+    }
+}
+
+
+.history-row {
+    p {
+        color: lighten($gray, 30);
+    }
+}
+
+.output-row {
+    p {
+        font-size: 56px !important;
+    }
+}
